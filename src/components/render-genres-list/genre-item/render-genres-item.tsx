@@ -16,7 +16,7 @@ const RenderGenresItem = ({ genre }: RenderGenresItemProps) => {
 
   return (
     <li className={`catalog__genres-item ${genre === currentGenre ? 'catalog__genres-item--active' : ''}`} >
-      <a href="" className="catalog__genres-link" onClick={onClickSetGenreHendler}>
+      <a href="#" className="catalog__genres-link" onClick={onClickSetGenreHendler}>
         {genre}
       </a>
     </li>
