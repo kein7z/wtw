@@ -6,7 +6,6 @@ import { getAvatar } from '../../../store/user-process/selectors';
 
 const RenderHeaderLogout = () => {
   const dispatch = useAppDispatch();
-
   const AVATAR_URL = useAppSelector(getAvatar);
 
   const onClickLogoutHeandler = (evt: { preventDefault: () => void; }) => {

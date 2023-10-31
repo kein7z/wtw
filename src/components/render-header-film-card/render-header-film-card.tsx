@@ -4,11 +4,10 @@ import { setFilm } from '../../store/film-process/film-process';
 import { getFilmPromo } from '../../store/film-promo-process/selectors';
 import AddFavoriteButton from '../add-favorite-button/add-favorite-button';
 import RenderHeaderLogin from '../render-header-login/render-header-login';
-import { AppRoute } from '../../const';
+import RenderHeaderLogo from './render-header-logo';
 
 const RenderHeaderFillmCard = () => {
   const promoFilm = useAppSelector(getFilmPromo);
-
   const dispatch = useAppDispatch();
   dispatch(setFilm(null));
 
@@ -22,13 +21,7 @@ const RenderHeaderFillmCard = () => {
       </div>
       <h1 className="visually-hidden">WTW</h1>
       <header className="page-header film-card__head">
-        <div className="logo">
-          <Link to={AppRoute.Main} className="logo__link">
-            <span className="logo__letter logo__letter--1">W</span>
-            <span className="logo__letter logo__letter--2">T</span>
-            <span className="logo__letter logo__letter--3">W</span>
-          </Link>
-        </div>
+        <RenderHeaderLogo isLight={false} />
         <RenderHeaderLogin />
       </header>
       <div className="film-card__wrap">

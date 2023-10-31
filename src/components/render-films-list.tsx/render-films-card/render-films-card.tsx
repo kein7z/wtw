@@ -12,7 +12,6 @@ const PLAYBACK_DELAY = 1000;
 
 const RenderFilmsCard = ({ name, previewImage, id, previewVideoLink }: RenderFilmsCardProps) => {
   const [isPlayingVideo, setIsPlaying] = useState(false);
-
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {

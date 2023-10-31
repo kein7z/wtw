@@ -2,12 +2,7 @@ import { useAppSelector } from '../../../hooks';
 import { getFilm } from '../../../store/film-process/selectors';
 
 const RenderFilmDetailsTabOverview = () => {
-
   const film = useAppSelector(getFilm);
-  // console.log(film?.starring);
-  // const starri = film?.starring.map((ele) => (`${ele}`));
-  // console.log(starri);
-
 
   return (
     <div className="film-card__text">

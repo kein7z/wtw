@@ -5,13 +5,10 @@ import { getFilm } from '../../store/film-process/selectors';
 import RenderFilmDetails from '../render-film-details/render-film-details';
 
 const RenderFilmNavigation = () => {
-
   const film = useAppSelector(getFilm);
-
   const [filmDetails, setFilmDetails] = useState('Overview');
 
   const ratingDescription = (rating: number | undefined) => {
-
     if (rating !== undefined) {
       switch (true) {
         case rating >= 0 && rating < 3:

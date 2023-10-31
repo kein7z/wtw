@@ -4,7 +4,6 @@ import { getFilm } from '../../store/film-process/selectors';
 import { AppRoute } from '../../const';
 
 const AddReviewButton = () => {
-
   const film = useAppSelector(getFilm);
 
   return (

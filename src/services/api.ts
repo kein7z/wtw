@@ -15,7 +15,6 @@ const BACKEND_URL = 'https://10.react.pages.academy/wtw';
 const REQUEST_TIMEOUT = 5000;
 
 export const createAPI = (): AxiosInstance => {
-
   const api = axios.create({
     baseURL: BACKEND_URL,
     timeout: REQUEST_TIMEOUT,
@@ -37,10 +36,8 @@ export const createAPI = (): AxiosInstance => {
       if (error.response && shouldDisplayError(error.response)) {
         toast.warn(error.response.data.error);
       }
-
       throw error;
     }
   );
-
   return api;
 };

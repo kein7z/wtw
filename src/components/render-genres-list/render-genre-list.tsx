@@ -5,7 +5,6 @@ import RenderGenresItem from './genre-item/render-genres-item';
 
 const RenderGenreList = () => {
   const films = useAppSelector(getFilms);
-
   const setGenres = new Set(films.map((element) => element.genre));
   const allGenres = ['All genres', ...setGenres];
 

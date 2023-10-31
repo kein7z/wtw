@@ -4,11 +4,9 @@ import RenderHeaderLogin from '../../components/render-header-login/render-heade
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { fetchFilmsFavoriteAction } from '../../store/api-actions';
 import { getFavoriteFilms } from '../../store/films-favorite-process/selectors';
-import { Link } from 'react-router-dom';
-import { AppRoute } from '../../const';
+import RenderHeaderLogo from '../../components/render-header-film-card/render-header-logo';
 
 const MyListScreen = () => {
-
   const dispatch = useAppDispatch();
   const filmsFavorite = useAppSelector(getFavoriteFilms);
 
@@ -19,13 +17,7 @@ const MyListScreen = () => {
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
-        <div className="logo">
-          <Link to={AppRoute.Main} className="logo__link">
-            <span className="logo__letter logo__letter--1">W</span>
-            <span className="logo__letter logo__letter--2">T</span>
-            <span className="logo__letter logo__letter--3">W</span>
-          </Link>
-        </div>
+        <RenderHeaderLogo isLight={false}/>
         <h1 className="page-title user-page__title">
           My list <span className="user-page__film-count">{filmsFavorite.length}</span>
         </h1>
@@ -38,13 +30,7 @@ const MyListScreen = () => {
         </div>
       </section>
       <footer className="page-footer">
-        <div className="logo">
-          <Link to={AppRoute.Main} className="logo__link logo__link--light">
-            <span className="logo__letter logo__letter--1">W</span>
-            <span className="logo__letter logo__letter--2">T</span>
-            <span className="logo__letter logo__letter--3">W</span>
-          </Link>
-        </div>
+        <RenderHeaderLogo isLight/>
         <div className="copyright">
           <p>© 2019 What to watch Ltd.</p>
         </div>
@@ -52,4 +38,5 @@ const MyListScreen = () => {
     </div>
   );
 };
+
 export default MyListScreen;

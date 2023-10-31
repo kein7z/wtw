@@ -10,7 +10,6 @@ const PlayerScreen = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [currentTime, setCurrentTime] = useState(0);
-
   const { id } = useParams();
   const dispatch = useAppDispatch();
   const film = useAppSelector(getFilm);
@@ -28,7 +27,6 @@ const PlayerScreen = () => {
     if (currentVideo === null) {
       return;
     }
-
     if (isVideoPlaying) {
       currentVideo.play();
     } else {
@@ -111,12 +109,8 @@ const PlayerScreen = () => {
               min='0'
               max={videoRef.current?.duration || 0}
               step={0.01}
-              // max={videoRef?.current?.duration || 0}
               onChange={handleSeek}
             />
-            {/* <div className="player__toggler" style={{ left: `${currentTime}%` }}>
-              Toggler
-            </div> */}
           </div>
           <div className="player__time-value">{formatLastTime}</div>
         </div>

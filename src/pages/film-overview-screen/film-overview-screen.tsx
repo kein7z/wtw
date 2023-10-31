@@ -23,7 +23,6 @@ const FilmDetailsScreen = () => {
 
   useEffect(() => {
     const filmId = Number(id);
-
     dispatch(fetchFilmIdAction(Number(filmId)));
     dispatch(fetchCommentsAction(Number(filmId)));
     dispatch(fetchFilmsSimilarAction(Number(filmId)));

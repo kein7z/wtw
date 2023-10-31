@@ -9,7 +9,6 @@ import RenderFilmsCard from './render-films-card/render-films-card';
 const RenderFilmsList = () => {
   const films = useAppSelector(getFilms);
   const genre = useAppSelector(getGenre);
-
   const [filmsCounter, setFilmsCounter] = useState(8);
 
   useEffect(() => {

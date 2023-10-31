@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
-import { AppRoute, MAX_NUMBER_OF_SIMILAR_FILMS } from '../../const';
+import { MAX_NUMBER_OF_SIMILAR_FILMS } from '../../const';
 import { useAppSelector } from '../../hooks';
 import { getFilmsSimilar } from '../../store/films-similar-process/selectors';
 import RenderFilmsCard from '../render-films-list.tsx/render-films-card/render-films-card';
+import RenderHeaderLogo from '../render-header-film-card/render-header-logo';
 
 const RenderFilmsSimilar = () => {
-
   const films = useAppSelector(getFilmsSimilar);
 
   return (
@@ -17,13 +16,7 @@ const RenderFilmsSimilar = () => {
         </div>
       </section>
       <footer className="page-footer">
-        <div className="logo">
-          <Link to={AppRoute.Main} className="logo__link logo__link--light">
-            <span className="logo__letter logo__letter--1">W</span>
-            <span className="logo__letter logo__letter--2">T</span>
-            <span className="logo__letter logo__letter--3">W</span>
-          </Link>
-        </div>
+        <RenderHeaderLogo isLight />
         <div className="copyright">
           <p>© 2019 What to watch Ltd.</p>
         </div>

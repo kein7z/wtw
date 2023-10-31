@@ -10,7 +10,6 @@ type RenderFilmDetailsProps = {
 }
 
 const RenderFilmDetails = (filmDetail: RenderFilmDetailsProps) => {
-
   const comments = useAppSelector(getComments);
 
   if (filmDetail.filmDetail === FilmDetails.Review) {

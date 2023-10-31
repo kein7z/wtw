@@ -3,9 +3,7 @@ import { getFilm } from '../../../store/film-process/selectors';
 import { formattingLastTime } from '../../../utils';
 
 const RenderFilmDetailsTabDetails = () => {
-
   const film = useAppSelector(getFilm);
-
   const runTime = film?.runTime;
 
   return (
