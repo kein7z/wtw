@@ -1440,10 +1440,3 @@ main {
   color: #fff;
   background: #fd612ead;
   border-radius: 15px; }
-  
-  @media (max-width: 768px) {
-    body {
-      transform: scale(0.8); /* Измените значение (0.8) по вашему усмотрению */
-      transform-origin: top left; /* Левый верхний угол */
-    }
-  }
