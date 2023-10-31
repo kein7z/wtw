@@ -14,7 +14,7 @@ const AuthPageLoginRoute: React.FC<AuthPageLoginRouteProps> = (props) => {
   return (
     authStatus !== AuthorizationStatus.Auth
       ? props.children
-      : <Navigate to={AppRoute.GitHubPages} />
+      : <Navigate to={AppRoute.Main} />
   );
 };
 

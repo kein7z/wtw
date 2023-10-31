@@ -48,7 +48,7 @@ const RenderFilmsCard = ({ name, previewImage, id, previewVideoLink }: RenderFil
     <article className="small-film-card catalog__films-card">
       <Link
         className="small-film-card__link"
-        to={`/what-to-watch/film/${id}`}
+        to={`/film/${id}`}
       >
         <video
           onMouseEnter={() => setIsPlaying(true)}

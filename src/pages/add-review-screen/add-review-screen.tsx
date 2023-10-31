@@ -4,6 +4,7 @@ import RenderHeaderLogin from '../../components/render-header-login/render-heade
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { fetchAddCommentsAction, fetchCommentsAction } from '../../store/api-actions';
 import { getFilm } from '../../store/film-process/selectors';
+import { AppRoute } from '../../const';
 
 const AddReviewScreen = () => {
   const film = useAppSelector(getFilm);
@@ -36,7 +37,7 @@ const AddReviewScreen = () => {
     if (formData.rating && formData['comment']) {
       dispatch(fetchAddCommentsAction([params?.id, formData]));
       dispatch(fetchCommentsAction(Number(params?.id)));
-      navigate(`/what-to-watch/film/${params?.id}`);
+      navigate(`/film/${params?.id}`);
     }
   };
 
@@ -62,7 +63,7 @@ const AddReviewScreen = () => {
         <h1 className="visually-hidden">WTW</h1>
         <header className="page-header">
           <div className="logo">
-            <Link to={'/what-to-watch/'} className="logo__link">
+            <Link to={AppRoute.Main} className="logo__link">
               <span className="logo__letter logo__letter--1">W</span>
               <span className="logo__letter logo__letter--2">T</span>
               <span className="logo__letter logo__letter--3">W</span>

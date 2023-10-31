@@ -6,7 +6,7 @@ import AddReviewButton from '../../components/add-review-button/add-review-butto
 import RenderFilmNavigation from '../../components/render-film-navigation/render-film-navigation';
 import RenderFilmsSimilar from '../../components/render-films-similar/render-films-similar';
 import RenderHeaderLogin from '../../components/render-header-login/render-header-login';
-import { AuthorizationStatus } from '../../const';
+import { AppRoute, AuthorizationStatus } from '../../const';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { fetchCommentsAction, fetchFilmIdAction, fetchFilmsSimilarAction } from '../../store/api-actions';
 import { getFilm, getFilmLoadingError, getFilmLoadingStatus } from '../../store/film-process/selectors';
@@ -54,7 +54,7 @@ const FilmDetailsScreen = () => {
           <h1 className="visually-hidden">WTW</h1>
           <header className="page-header film-card__head">
             <div className="logo">
-              <Link to={'/what-to-watch'} className="logo__link">
+              <Link to={AppRoute.Main} className="logo__link">
                 <span className="logo__letter logo__letter--1">W</span>
                 <span className="logo__letter logo__letter--2">T</span>
                 <span className="logo__letter logo__letter--3">W</span>
@@ -70,7 +70,7 @@ const FilmDetailsScreen = () => {
                 <span className="film-card__year">{film?.released}</span>
               </p>
               <div className="film-card__buttons">
-                <Link to={`/what-to-watch/player/${film?.id}`} className="btn btn--play film-card__button">
+                <Link to={`/player/${film?.id}`} className="btn btn--play film-card__button">
                   <svg viewBox="0 0 19 19" width={19} height={19}>
                     <use xlinkHref="#play-s" />
                   </svg>

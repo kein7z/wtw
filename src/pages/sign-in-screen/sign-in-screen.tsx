@@ -4,6 +4,7 @@ import { useAppDispatch } from '../../hooks';
 import { loginAction } from '../../store/api-actions';
 import { AuthData } from '../../types/auth-data';
 import { Link } from 'react-router-dom';
+import { AppRoute } from '../../const';
 
 const containsLetters = /[a-zA-Z]/;
 const containsNumbers = /[0-9]/;
@@ -48,7 +49,7 @@ const SignInScreen = () => {
     <div className="user-page">
       <header className="page-header user-page__head">
         <div className="logo">
-          <Link to={'/what-to-watch/'} className="logo__link">
+          <Link to={AppRoute.Main} className="logo__link">
             <span className="logo__letter logo__letter--1">W</span>
             <span className="logo__letter logo__letter--2">T</span>
             <span className="logo__letter logo__letter--3">W</span>
@@ -105,7 +106,7 @@ const SignInScreen = () => {
       </div>
       <footer className="page-footer">
         <div className="logo">
-          <Link to={'/what-to-watch/'} className="logo__link">
+          <Link to={AppRoute.Main} className="logo__link">
             <span className="logo__letter logo__letter--1">W</span>
             <span className="logo__letter logo__letter--2">T</span>
             <span className="logo__letter logo__letter--3">W</span>

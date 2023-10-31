@@ -64,10 +64,6 @@ const App = () => {
           }
         />
         <Route
-          path={AppRoute.GitHubPages}
-          element={<MainScreen />}
-        />
-        <Route
           path='*'
           element={<NotFoundScreen />}
         />
